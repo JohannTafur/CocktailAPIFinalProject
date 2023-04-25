@@ -1,0 +1,59 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    display: flex;
+}
+
+.menu {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: whitesmoke;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 50px;
+    box-shadow: 1px 1px 20px rgb(255, 0, 0);
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative; 
+    flex-basis: 17%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.tittle {    
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(27, 27, 27, .5);
+    color: rgb(255, 255, 255);   
+    border-radius: 6px;
+    padding: 5px;
+    width: 100%;
+}
