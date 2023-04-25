@@ -23,18 +23,11 @@
 
 #category{
     display: flex;
-    /* margin-bottom: 11%; */
     justify-content:space-evenly;
     align-items: center;
 }
 
-/* .categories{
-    width: 190%;
-    height: 120%;     */
-    /* border: 1px solid black; */
-/* } */
-
-.under{
+.coctel-category{
     text-align: center;
 }
 
