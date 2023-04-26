@@ -3,11 +3,52 @@
     padding: 0%;
 }
 
-body{
-    display: flex;
+/*Header*/
+
+header {
+    padding: 2vh;
+    border-bottom: 1px solid black;
 }
 
-.menu {
+#mainTitle {
+    text-align: center;
+}
+
+#logo {
+    float: left;
+    flex-direction: row;
+    width: 10%;
+}
+
+/*----------------------------------------------------------------------------*/
+
+#leakedTitles {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#category {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.coctel {
+    width: 50%;
+}
+
+.coctels:hover {
+    width: 105%;
+}
+
+.arrow {
+    width: 7%;
+}
+
+/* -------------------------------- */
+
+#menu {
     background-color: rgb(255, 255, 255);
     padding: 20px;
 }
@@ -23,8 +64,15 @@ li {
     margin-bottom: 5px;
 }
 
-
 section {
+    display: flex;
+    border-top: 1px solid black;
+    padding: 2vh;
+}
+
+#cardContent {
+    max-height: 62vh;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -37,8 +85,8 @@ section {
     box-shadow: 1px 1px 20px rgb(255, 0, 0);
     overflow: hidden;
     border-radius: 10px;
-    position: relative; 
-    flex-basis: 17%;
+    position: relative;
+    flex-basis: 18%;
 }
 
 img {
@@ -46,13 +94,13 @@ img {
     width: 100%;
 }
 
-.tittle {    
+.tittle {
     position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(27, 27, 27, .5);
-    color: rgb(255, 255, 255);   
+    color: rgb(255, 255, 255);
     border-radius: 6px;
     padding: 5px;
     width: 100%;
