@@ -22,16 +22,28 @@ header {
 
 /*----------------------------------------------------------------------------*/
 
-#leakedTitles {
+/* #leakedTitles {
     margin-top: 1%;
     display: flex;
     justify-content: space-around;
-}
+} */
 
 #category {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+#addCategory{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameFromCategory{
+    /* margin-right: 45px; */
+    
+    display: flex;
+    justify-content: space-between;
 }
 
 .coctel {
@@ -80,7 +92,7 @@ section {
     flex-wrap: wrap;
 }
 
-.card {
+.cocktailCards, .categoryCards {
     margin: 50px;
     box-shadow: 1px 1px 20px rgb(255, 0, 0);
     overflow: hidden;
