@@ -80,7 +80,7 @@ section {
     flex-wrap: wrap;
 }
 
-.card {
+.cocktailCards, .categoryCards {
     margin: 50px;
     box-shadow: 1px 1px 20px rgb(255, 0, 0);
     overflow: hidden;
