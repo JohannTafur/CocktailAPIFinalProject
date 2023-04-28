@@ -11,7 +11,11 @@ const showMenu = (newLink) => {
     newLink.map((newLink =>{
 
         const cocktailsName = document.querySelector(".nameFromCategory");
-        cocktailsName.innerHTML = `${newLink.strCategory}`
+        cocktailsName.innerHTML = newLink.strCategory
+
+        const categoryImage = document.querySelector('.coctels')
+        categoryImage.src = 'https://static.vecteezy.com/system/resources/previews/008/585/294/original/3d-rendering-sport-blue-car-on-white-bakcground-jpg-free-photo.jpg'
+
 
         const cocktailTemplate = document.querySelector('.nameFromCategory')
         const cocktailsClone = cocktailTemplate.cloneNode(true)
