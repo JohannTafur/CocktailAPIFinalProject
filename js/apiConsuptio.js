@@ -1,13 +1,11 @@
-export const cocktailsApi = async () => {
-    const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
+export const cocktailsApi = async (apiUrl) => {
     const response = await fetch(apiUrl);
     const data = await response.json();
     return data.drinks
 }
 
-export const ingredientsApi = async () => {
-    const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+export const ingredientsApi = async (apiUrl) => {
     const response = await fetch(apiUrl);
     const data = await response.json();
-    return data.drinks
+    return data.ingredients
 }

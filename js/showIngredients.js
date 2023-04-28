@@ -1,4 +1,4 @@
-import { ingredientsApi } from './apiConsuptio.js';
+import { cocktailsApi } from './apiConsuptio.js';
 
 const bringIngredients = (ingredients) => {
 
@@ -13,6 +13,6 @@ const bringIngredients = (ingredients) => {
     })
 }
 
-export const showIngredients = async () => {
-    bringIngredients(await ingredientsApi())
+export const showIngredients = async (urlApi) => {
+    bringIngredients(await cocktailsApi(urlApi))
 }

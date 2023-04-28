@@ -48,15 +48,28 @@ header {
 
 /* -------------------------------- */
 
+.menu2{
+    margin-right: 13%;
+    margin-top: 500px;
+}
+
 #menu {
     background-color: rgb(255, 255, 255);
     padding: 20px;
+    height: 100vh;
+    overflow-y: scroll;
 }
+
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
 
 ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    width: 200px;
+    height: 10%;
 }
 
 li {
@@ -71,8 +84,7 @@ section {
 }
 
 #cardContent {
-    max-height: 62vh;
-    overflow-y: auto;
+    height: 10%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -80,7 +92,8 @@ section {
     flex-wrap: wrap;
 }
 
-.cocktailCards, .categoryCards {
+.cocktailCards,
+.categoryCards {
     margin: 50px;
     box-shadow: 1px 1px 20px rgb(255, 0, 0);
     overflow: hidden;

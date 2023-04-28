@@ -1,6 +1,6 @@
 import { cocktailsApi } from './apiConsuptio.js';
 
-const createCocktailCard = (cocktails) => {
+export const createCocktailCard = (cocktails) => {
 
     cocktails.map((cocktails) => {
 
@@ -20,6 +20,6 @@ const createCocktailCard = (cocktails) => {
     cardDelete.remove();
 }
 
-export const showCocktails = async () => {
-    createCocktailCard(await cocktailsApi())
+export const showCocktails = async (urlApi) => {
+    createCocktailCard(await cocktailsApi(urlApi))
 }
