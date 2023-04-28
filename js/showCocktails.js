@@ -1,4 +1,4 @@
-import { cocktailsApi } from './apiConsuptio.js';
+import { api } from './apiConsuptio.js';
 
 export const createCocktailCard = (cocktails) => {
 
@@ -10,8 +10,17 @@ export const createCocktailCard = (cocktails) => {
         const cocktailsName = document.querySelector(".showCocktailName");
         cocktailsName.innerHTML = cocktails.strDrink;
 
+        const coctailid = cocktails.idDrink;
+
         const cocktailTemplate = document.querySelector('.cocktailCards');
         const cocktailsClone = cocktailTemplate.cloneNode(true);
+
+        cocktailsClone.setAttribute('id', coctailid)
+
+        cocktailsClone.addEventListener('click', () => {
+            const clickedCocktailId = cocktailsClone.getAttribute('id');
+            console.log(clickedCocktailId);
+        });
 
         document.querySelector('#cardContent').appendChild(cocktailsClone);
     })
@@ -21,5 +30,5 @@ export const createCocktailCard = (cocktails) => {
 }
 
 export const showCocktails = async (urlApi) => {
-    createCocktailCard(await cocktailsApi(urlApi))
+    createCocktailCard(await api(urlApi))
 }
