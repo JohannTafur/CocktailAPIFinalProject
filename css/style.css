@@ -10,8 +10,12 @@ section {
     margin-bottom: 2%;
 }
 
+/* 
+Ingredient Styles 
+*/
+
 #menu {
-    padding: 20px;
+    padding: 0px 30px 0 10px;
 }
 
 ul {
@@ -19,13 +23,51 @@ ul {
 }
 
 #menu ul li {
-    padding-top: 25px;
+    padding-top: 27px;
 }
 
-li:hover {
-    cursor: pointer;
-    color: aliceblue;
+/*
+Styles of displaying cocktail information
+*/
+
+#cocktail {
+    text-align: center;
+    margin: 0% 3% 3% 3%;
 }
+
+#cocktail p{
+    margin: 1%;
+    padding: 2%;
+}
+
+#cocktailInformation {   
+    margin: 1% 12%;
+    align-items: center; 
+    display: flex;
+}
+
+#cocktailInformation img {
+    width: 28%;
+}
+
+#cocktailIngredients {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cocktailIngredients div{
+    width: 28%;
+    margin: 20PX;
+}
+
+#cocktailIngredients img {
+    width: 50%;
+    height: 83%;
+}
+
+/*
+cocktail cards style
+*/
 
 #cardContent {
     display: flex;
@@ -42,7 +84,6 @@ li:hover {
     border-radius: 10px;
     position: relative;
     width: 19%;
-
 }
 
 img {
@@ -61,6 +102,10 @@ img {
     width: 100%;
 }
 
+/* 
+Alphabet Bar Styles
+*/
+
 #alphabet {
     background-color: brown;
     position: fixed;
@@ -72,4 +117,9 @@ img {
     display: flex;
     justify-content: space-around;
     padding: 1%;
+}
+
+#content li:hover {
+    cursor: pointer;
+    color: aliceblue;
 }
