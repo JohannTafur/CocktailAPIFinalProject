@@ -1,6 +1,6 @@
 import { cocktailsApi } from './apiConsuptio.js'
 
-const createCocktailCard = (cocktails) => {
+export const createCocktailCard = (cocktails) => {
 
     const cardCreate = (cocktails) => {
 
