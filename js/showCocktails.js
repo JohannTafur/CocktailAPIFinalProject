@@ -2,6 +2,12 @@ import { cocktailsApi } from './apiConsuptio.js'
 
 export const createCocktailCard = (cocktails) => {
 
+    const cardContent = document.querySelector('#cardContent');
+
+    while (cardContent.firstChild) {
+        cardContent.removeChild(cardContent.firstChild);
+    }
+
     const cardCreate = (cocktails) => {
 
         const cards = document.querySelector('#cardContent');
@@ -27,8 +33,8 @@ export const createCocktailCard = (cocktails) => {
         divTextContent.appendChild(textElement)
 
         content.appendChild(imgElement)
-        content.appendChild(divTextContent) 
-        
+        content.appendChild(divTextContent)
+
         cards.appendChild(content)
     }
 
