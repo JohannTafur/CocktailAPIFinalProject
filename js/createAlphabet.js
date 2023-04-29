@@ -1,5 +1,4 @@
-import { createCocktailCard } from './showCocktails.js'
-import { cocktailsApi } from './apiConsuptio.js'
+import  { showCocktails } from './showCocktails.js'
 
 export const alphabetCreate = () => {
 
@@ -14,7 +13,7 @@ export const alphabetCreate = () => {
             const click = letterElement.innerHTML
             console.log(click);
 
-            createCocktailCard(await cocktailsApi(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${click}`));
+            showCocktails(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${click}`)
 
         })
 

@@ -4,25 +4,35 @@ export const createCocktailCard = (cocktails) => {
 
     const cardCreate = (cocktails) => {
 
-        const cocktailTemplate = document.querySelector('.cocktailCards')
-        const cocktailsClone = cocktailTemplate.cloneNode(true)
+        const cards = document.querySelector('#cardContent');
 
-        cocktailTemplate.setAttribute('id', cocktails.idDrink)
+        const content = document.createElement('div');
+        content.classList.add('cocktailCards');
+        content.setAttribute('id', cocktails.idDrink);
 
-        const cocktailImages = document.querySelector(".showCocktailPicture");
-        cocktailImages.src = cocktails.strDrinkThumb
-        cocktailImages.alt = `cocktail name - ${cocktails.strDrink}`
+        const imgElement = document.createElement('img');
+        imgElement.classList.add('showCocktailPicture');
+        imgElement.src = cocktails.strDrinkThumb
+        imgElement.alt = `cocktail name - ${cocktails.strDrink}`
 
-        const cocktailsName = document.querySelector(".showCocktailName");
-        cocktailsName.innerHTML = cocktails.strDrink
+        content.appendChild(imgElement)
 
-        document.querySelector('#cardContent').appendChild(cocktailsClone);
+        const divTextContent = document.createElement('div');
+        divTextContent.classList.add('tittle');
+
+        const textElement = document.createElement('h1');
+        textElement.classList.add('showCocktailName');
+        textElement.textContent = cocktails.strDrink
+
+        divTextContent.appendChild(textElement)
+
+        content.appendChild(imgElement)
+        content.appendChild(divTextContent) 
+        
+        cards.appendChild(content)
     }
 
     cocktails.map(cardCreate)
-
-    const cardDelete = document.querySelector('#delete');
-    cardDelete.remove();
 }
 
 export const showCocktails = async (urlApi) => {
