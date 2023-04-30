@@ -1,6 +1,8 @@
 import { cocktailsApi } from './apiConsuptio.js'
+import { bringInformation } from './cocktailInformation.js'
 
-export const createCocktailCard = (cocktails) => {
+
+const createCocktailCard = (cocktails) => {
 
     const cardContent = document.querySelector('#cardContent');
 
@@ -32,10 +34,17 @@ export const createCocktailCard = (cocktails) => {
 
         divTextContent.appendChild(textElement)
 
-        content.appendChild(imgElement)
         content.appendChild(divTextContent)
 
         cards.appendChild(content)
+
+        content.addEventListener('click', async () => {
+            const clickCradsContent = content.id;
+            console.log(clickCradsContent);
+            const x = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${clickCradsContent}`
+            bringInformation(x)
+            
+        })
     }
 
     cocktails.map(cardCreate)
