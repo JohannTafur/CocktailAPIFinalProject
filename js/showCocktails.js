@@ -36,6 +36,11 @@ export const createCocktailCard = (cocktails) => {
         content.appendChild(divTextContent)
 
         cards.appendChild(content)
+
+        content.addEventListener('click', () => {
+            const clickCradsContent = content.getAttribute('id');
+            console.log(clickCradsContent);
+        })
     }
 
     cocktails.map(cardCreate)
