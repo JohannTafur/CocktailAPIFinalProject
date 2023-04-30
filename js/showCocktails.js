@@ -41,9 +41,7 @@ const createCocktailCard = (cocktails) => {
         content.addEventListener('click', async () => {
             const clickCradsContent = content.id;
             console.log(clickCradsContent);
-            const x = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${clickCradsContent}`
-            bringInformation(x)
-            
+            bringInformation(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${clickCradsContent}`)
         })
     }
 

@@ -1,5 +1,4 @@
 import { cocktailsApi } from './apiConsuptio.js'
-import { showIngredients } from './bringIngredients.js'
 
 const createCocktailInformation = (cocktail) => {
 
@@ -42,7 +41,6 @@ const createCocktailInformation = (cocktail) => {
                 ingredientImage.src = `https://www.thecocktaildb.com/images/ingredients/${cocktail[prop]}-Medium.png`
                 ingredientImage.alt = `Ingredient Name: ${cocktail[prop]}`
                 ingredients.appendChild(ingredientImage);
-
 
                 const ingredientName = document.createElement('p');
                 ingredientName.textContent = cocktail[prop]

@@ -1,4 +1,4 @@
-import  { showCocktails } from './showCocktails.js'
+import { showCocktails } from './showCocktails.js'
 
 export const alphabetCreate = () => {
 
@@ -11,7 +11,6 @@ export const alphabetCreate = () => {
 
         letterElement.addEventListener('click', async () => {
             const click = letterElement.innerHTML
-            console.log(click);
 
             showCocktails(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${click}`)
 
