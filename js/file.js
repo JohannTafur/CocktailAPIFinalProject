@@ -11,11 +11,7 @@ const showMenu = (newLink) => {
     newLink.map((newLink =>{
 
         const cocktailsName = document.querySelector(".nameFromCategory");
-        cocktailsName.innerHTML = `<a>${newLink.strCategory}</a>`
-
-        const categoryImage = document.querySelector('.coctels')
-        categoryImage.src = 'static.vecteezy.com/system/resources/previews/008/585/294/original/3d-rendering-sport-blue-car-on-white-bakcground-jpg-free-photo.jpg'
-
+        cocktailsName.innerHTML = newLink.strCategory
 
         const cocktailTemplate = document.querySelector('.nameFromCategory')
         const cocktailsClone = cocktailTemplate.cloneNode(true)
@@ -26,8 +22,6 @@ const showMenu = (newLink) => {
     cardDelete.remove();
 }
 
-const showCategory = async () =>{
+export const showCategory = async () =>{
     showMenu(await cocktail());
 }
-
-showCategory()
