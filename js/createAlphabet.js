@@ -4,7 +4,7 @@ export const alphabetCreate = () => {
 
     const contentElement = document.querySelector('#content');
 
-    for (let i = 65; i <= 90; i++) {
+    for (let i = 65; i <= 90; i+=1) {
 
         const letterElement = document.createElement('li');
         letterElement.classList.add('alphabetContent');
