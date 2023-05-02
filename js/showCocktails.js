@@ -1,34 +1,52 @@
-import { api } from './apiConsuptio.js';
+import { cocktailsApi } from './apiConsuptio.js'
+import { bringInformation } from './cocktailInformation.js'
 
-export const createCocktailCard = (cocktails) => {
+const createCocktailCard = (cocktails) => {
 
-    cocktails.map((cocktails) => {
+    const cardContent = document.querySelector('#cardContent');
 
-        const cocktailImages = document.querySelector(".showCocktailPicture");
-        cocktailImages.src = cocktails.strDrinkThumb;
+    while (cardContent.firstChild) {
+        cardContent.removeChild(cardContent.firstChild);
+    }
 
-        const cocktailsName = document.querySelector(".showCocktailName");
-        cocktailsName.innerHTML = cocktails.strDrink;
+    const cardCreate = (cocktails) => {
 
-        const coctailid = cocktails.idDrink;
+        const cards = document.querySelector('#cardContent');
 
-        const cocktailTemplate = document.querySelector('.cocktailCards');
-        const cocktailsClone = cocktailTemplate.cloneNode(true);
+        const content = document.createElement('div');
+        content.classList.add('cocktailCards');
+        content.setAttribute('id', cocktails.idDrink);
 
-        cocktailsClone.setAttribute('id', coctailid)
+        const imgElement = document.createElement('img');
+        imgElement.classList.add('showCocktailPicture');
+        imgElement.src = cocktails.strDrinkThumb
+        imgElement.alt = `cocktail name - ${cocktails.strDrink}`
 
-        cocktailsClone.addEventListener('click', () => {
-            const clickedCocktailId = cocktailsClone.getAttribute('id');
-            console.log(clickedCocktailId);
-        });
+        content.appendChild(imgElement)
 
-        document.querySelector('#cardContent').appendChild(cocktailsClone);
-    })
+        const divTextContent = document.createElement('div');
+        divTextContent.classList.add('tittle');
 
-    const cardDelete = document.querySelector('#delete');
-    cardDelete.remove();
+        const textElement = document.createElement('h1');
+        textElement.classList.add('showCocktailName');
+        textElement.textContent = cocktails.strDrink
+
+        divTextContent.appendChild(textElement)
+
+        content.appendChild(divTextContent)
+
+        cards.appendChild(content)
+
+        content.addEventListener('click', async () => {
+            const clickCradsContent = content.id;
+            console.log(clickCradsContent);
+            bringInformation(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${clickCradsContent}`)
+        })
+    }
+
+    cocktails.map(cardCreate)
 }
 
 export const showCocktails = async (urlApi) => {
-    createCocktailCard(await api(urlApi))
+    createCocktailCard(await cocktailsApi(urlApi))
 }

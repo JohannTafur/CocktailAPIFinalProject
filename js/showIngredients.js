@@ -1,18 +1,31 @@
-import { api } from './apiConsuptio.js';
+import { cocktailsApi } from './apiConsuptio.js'
+import { showCocktails } from './showCocktails.js'
 
-const bringIngredients = (ingredients) => {
+const ingredientsCreate = (ingredients) => {
 
-    ingredients.map((ingredients) => {
+    const ingredientsMenu = document.querySelector('#menu')
 
-        const cocktailIngredients = document.querySelector('.showCocktailIngredients');
-        cocktailIngredients.innerHTML = ingredients.strIngredient1;
+    const listMenu = document.createElement('ul');
+    ingredientsMenu.appendChild(listMenu);
 
-        const ingredientsTemplate = document.querySelector('.showCocktailIngredients');
-        const ingredientsClone = ingredientsTemplate.cloneNode(true);
-        document.querySelector('#addIngredients').appendChild(ingredientsClone);
+    ingredients.map((ingredient) => {
+
+        const ingredientsName = document.createElement('li')
+
+        ingredientsName.addEventListener('click', () => {
+            const click = ingredientsName.innerHTML;
+
+            const tittle = document.querySelector('#mainTitle');
+            tittle.textContent = `Cocktails with ${click}`
+
+            showCocktails(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${click}`)
+        })
+
+        ingredientsName.textContent = ingredient.strIngredient1;
+        listMenu.appendChild(ingredientsName)
     })
 }
 
-export const showIngredients = async (urlApi) => {
-    bringIngredients(await api(urlApi))
+export const showIngredient = async (url) => {
+    ingredientsCreate(await cocktailsApi(url))
 }
