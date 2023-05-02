@@ -21,6 +21,11 @@ ul {
     list-style: none;
 }
 
+li:hover {
+    cursor: pointer;
+    color: rgb(1, 196, 231);
+}
+
 /*
 header styles
 */
@@ -69,8 +74,10 @@ section {
 Ingredient Styles 
 */
 
-#menu {
-    padding: 0px 50px 0 10px;
+#menu {   
+    border-right: 2px solid rgb(141, 182, 0);
+    margin-right: 30px;
+    padding: 0px 30px 0 10px;
 }
 
 #menu h1 {
@@ -160,7 +167,7 @@ cocktail cards style
     overflow: hidden;
     border-radius: 10px;
     position: relative;
-    width: 19%;
+    width: 18%;
 }
 
 .cocktailCards:hover {
@@ -198,10 +205,4 @@ Alphabet Bar Styles
     display: flex;
     justify-content: space-around;
     padding: 1%;
-}
-
-.alphabetContent:hover,
-.categoryName:hover {
-    cursor: pointer;
-    color: rgb(1, 196, 231);
 }
