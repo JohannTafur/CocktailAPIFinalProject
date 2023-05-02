@@ -12,8 +12,8 @@ export const alphabetCreate = () => {
         letterElement.addEventListener('click', async () => {
             const click = letterElement.innerHTML
 
-            const categoryNmae = document.querySelector('#mainTitle')
-            categoryNmae.textContent = 'All cocktails'
+            const categoryName = document.querySelector('#mainTitle')
+            categoryName.textContent = 'All cocktails'
 
             showCocktails(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${click}`)
         })

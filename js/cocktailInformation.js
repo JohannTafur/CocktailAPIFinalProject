@@ -8,7 +8,7 @@ const createCocktailInformation = (cocktail) => {
         cocktailInformation.removeChild(cocktailInformation.firstChild);
     }
 
-    const informatinCraete = (cocktail) => {
+    const informationCreate = (cocktail) => {
         const cocktaiInformation = document.querySelector('#cocktail');
 
         const divh1 = document.createElement('div')
@@ -36,19 +36,19 @@ const createCocktailInformation = (cocktail) => {
         cocktailsIngredients.setAttribute('id', 'cocktailIngredients');
         divImageAndIngredients.appendChild(cocktailsIngredients);
 
-        for (const prop in cocktail) {
-            if (prop.startsWith('strIngredient') && cocktail[prop] !== null) {
+        for (const key in cocktail) {
+            if (key.startsWith('strIngredient') && cocktail[key] !== null) {
 
                 const ingredients = document.createElement('div');
                 cocktailsIngredients.appendChild(ingredients);
 
                 const ingredientImage = document.createElement('img');
-                ingredientImage.src = `https://www.thecocktaildb.com/images/ingredients/${cocktail[prop]}-Medium.png`
-                ingredientImage.alt = `Ingredient Name: ${cocktail[prop]}`
+                ingredientImage.src = `https://www.thecocktaildb.com/images/ingredients/${cocktail[key]}-Medium.png`
+                ingredientImage.alt = `Ingredient Name: ${cocktail[key]}`
                 ingredients.appendChild(ingredientImage);
 
                 const ingredientName = document.createElement('p');
-                ingredientName.textContent = cocktail[prop]
+                ingredientName.textContent = cocktail[key]
                 ingredients.appendChild(ingredientName)
 
                 ingredients.addEventListener('click', () => {
@@ -66,7 +66,7 @@ const createCocktailInformation = (cocktail) => {
         cocktaiInformation.appendChild(cocktailDescription);
     }
 
-    cocktail.map(informatinCraete)
+    cocktail.map(informationCreate)
 }
 
 export const bringInformation = async (url) => {

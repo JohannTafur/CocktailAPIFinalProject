@@ -3,11 +3,11 @@ import { showCocktails } from './showCocktails.js'
 
 const showMenu = (cocktailCategory) => {
 
-    const categorys = document.querySelector('#category');
+    const categories = document.querySelector('#category');
 
     const content = document.createElement('ul');
     content.setAttribute('id', 'addCategory');
-    categorys.appendChild(content);
+    categories.appendChild(content);
 
     cocktailCategory.map((cocktailCategory => {
 

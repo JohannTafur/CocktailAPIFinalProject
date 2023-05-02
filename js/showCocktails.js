@@ -6,8 +6,11 @@ const createCocktailCard = (cocktails) => {
     const cardContent = document.querySelector('#cardContent');
     const informationContent = document.querySelector('#cocktail');
 
-    while (cardContent.firstChild || informationContent.firstChild) {
+    while (cardContent.firstChild) {
         cardContent.removeChild(cardContent.firstChild);
+    }
+
+    while( informationContent.firstChild){
         informationContent.removeChild(informationContent.firstChild);
     }
 
