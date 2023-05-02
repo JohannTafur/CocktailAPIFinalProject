@@ -4,16 +4,34 @@
     font-family: sans-serif;
 }
 
+body {
+    background: whitesmoke;
+}
+
+h1 {
+    margin-top: 1%;
+    text-align: center;
+}
+
+h1, h3, p, li {
+    color: rgb(0, 0, 0);
+}
+
 ul {
     list-style: none;
+}
+
+li:hover {
+    cursor: pointer;
+    color: rgb(1, 196, 231);
 }
 
 /*
 header styles
 */
+
 header {
     padding: 2vh;
-    border-bottom: 1px solid black;
 }
 
 #logo {
@@ -22,7 +40,8 @@ header {
     width: 10%;
 }
 
-#mainTitle {
+header div {
+    margin: 10px;
     text-align: center;
 }
 
@@ -30,20 +49,15 @@ header {
 category styles
 */
 
-#addCategory {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1%;
-}
-
-.categoryNames {
-    border-bottom: 1px solid black;
+#category {
+    border-bottom: 2px solid rgb(141, 182, 0);
+    border-top: 2px solid rgb(141, 182, 0);
 }
 
 #addCategory {
     display: flex;
     justify-content: space-around;
-    margin: 18px;
+    margin: 1%;
 }
 
 /*
@@ -60,8 +74,14 @@ section {
 Ingredient Styles 
 */
 
-#menu {
+#menu {   
+    border-right: 2px solid rgb(141, 182, 0);
+    margin-right: 30px;
     padding: 0px 30px 0 10px;
+}
+
+#menu h1 {
+    text-align: left;
 }
 
 #menu ul li {
@@ -75,6 +95,11 @@ Styles of displaying cocktail information
 #cocktail {
     text-align: center;
     margin-top: 1%;
+    box-shadow: 1px 1px 20px rgb(1, 196, 231);
+}
+
+.textNmae {
+    padding: 1%;
 }
 
 #cocktail p {
@@ -91,6 +116,7 @@ Styles of displaying cocktail information
 #cocktailImage img {
     border-radius: 6%;
     width: 55%;
+    box-shadow: 1px 1px 20px rgb(141, 182, 0);
 }
 
 #cocktailIngredients {
@@ -102,17 +128,18 @@ Styles of displaying cocktail information
     margin: 3%;
     border-radius: 5%;
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 20px rgba(140, 182, 0, 0.527);
     transition: transform 0.3s ease-in-out;
 }
 
 #cocktailIngredients div:hover {
     transform: translateY(-10px);
+    box-shadow: 1px 1px 20px rgb(1, 196, 231)
 }
 
 #cocktailIngredients div img {
     width: 120px;
-    height: 120px;
+    height: 110px;
     border-radius: 50%;
     margin: 10px 5px;
 }
@@ -132,16 +159,19 @@ cocktail cards style
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    background: whitesmoke;
 }
 
 .cocktailCards {
     margin: 50px;
-    box-shadow: 1px 1px 20px rgb(255, 0, 0);
+    box-shadow: 1px 1px 20px rgb(141, 182, 0);
     overflow: hidden;
     border-radius: 10px;
     position: relative;
-    width: 19%;
+    width: 18%;
+}
+
+.cocktailCards:hover {
+    box-shadow: 1px 1px 20px rgb(1, 196, 231)
 }
 
 .showCocktailPicture {
@@ -154,8 +184,8 @@ cocktail cards style
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(27, 27, 27, .5);
-    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(184, 184, 184);
     padding: 5px;
     width: 100%;
 }
@@ -165,7 +195,7 @@ Alphabet Bar Styles
 */
 
 #alphabet {
-    background-color: brown;
+    background-color: rgb(141, 182, 0);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -175,9 +205,4 @@ Alphabet Bar Styles
     display: flex;
     justify-content: space-around;
     padding: 1%;
-}
-
-#content li:hover {
-    cursor: pointer;
-    color: aliceblue;
 }
