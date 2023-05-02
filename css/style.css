@@ -58,7 +58,10 @@ category styles
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin: 1%;
+}
+
+.categoryName{
+    margin: 0.9% 1%;
 }
 
 /*
