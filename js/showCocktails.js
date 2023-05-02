@@ -1,8 +1,7 @@
 import { cocktailsApi } from './apiConsuptio.js'
 import { bringInformation } from './cocktailInformation.js'
 
-
-export const createCocktailCard = (cocktails) => {
+const createCocktailCard = (cocktails) => {
 
     const cardContent = document.querySelector('#cardContent');
 

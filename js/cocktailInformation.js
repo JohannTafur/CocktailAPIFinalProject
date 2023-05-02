@@ -10,9 +10,13 @@ const createCocktailInformation = (cocktail) => {
     const informatinCraete = (cocktail) => {
         const cocktaiInformation = document.querySelector('#cocktail');
 
+        const divh1 = document.createElement('div')
+        divh1.classList.add('textNmae');
+        cocktaiInformation.appendChild(divh1)
+
         const cocktailName = document.createElement('h1');
         cocktailName.textContent = cocktail.strDrink
-        cocktaiInformation.appendChild(cocktailName);
+        divh1.appendChild(cocktailName);
 
         const divImageAndIngredients = document.createElement('div');
         divImageAndIngredients.setAttribute('id', 'cocktailInformation');
