@@ -1,4 +1,5 @@
 import { cocktailsApi } from './apiConsuptio.js'
+import { showCocktails } from './showCocktails.js'
 
 const createCocktailInformation = (cocktail) => {
 
@@ -49,6 +50,14 @@ const createCocktailInformation = (cocktail) => {
                 const ingredientName = document.createElement('p');
                 ingredientName.textContent = cocktail[prop]
                 ingredients.appendChild(ingredientName)
+
+                ingredients.addEventListener('click', () => {
+                    const click = ingredientName.innerHTML
+                    console.log(click)
+                    const tittle = document.querySelector('#mainTitle');
+                    tittle.textContent = `Cocktails with ${click}`
+                    showCocktails(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${click}`)
+                })
             }
         }
 
