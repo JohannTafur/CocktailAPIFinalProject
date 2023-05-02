@@ -1,17 +1,37 @@
 * {
     margin: 0%;
     padding: 0%;
+    font-family: sans-serif;
 }
 
-/*Header*/
+body {
+    background: whitesmoke;
+}
+
+h1 {
+    margin-top: 1%;
+    text-align: center;
+}
+
+h1, h3, p, li {
+    color: rgb(0, 0, 0);
+}
+
+ul {
+    list-style: none;
+}
+
+li:hover {
+    cursor: pointer;
+    color: rgb(1, 196, 231);
+}
+
+/*
+header styles
+*/
 
 header {
     padding: 2vh;
-    border-bottom: 1px solid black;
-}
-
-#mainTitle {
-    text-align: center;
 }
 
 #logo {
@@ -20,101 +40,169 @@ header {
     width: 10%;
 }
 
-/*----------------------------------------------------------------------------*/
-
-#leakedTitles {
-    margin-top: 1%;
-    display: flex;
-    justify-content: space-around;
+header div {
+    margin: 10px;
+    text-align: center;
 }
+
+/*
+category styles
+*/
 
 #category {
+    border-bottom: 2px solid rgb(141, 182, 0);
+    border-top: 2px solid rgb(141, 182, 0);
+}
+
+#addCategory {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-around;
+    margin: 1%;
 }
 
-.coctel {
-    width: 50%;
-}
-
-.coctels:hover {
-    width: 105%;
-}
-
-.arrow {
-    width: 7%;
-}
-
-/* -------------------------------- */
-
-.menu2{
-    margin-right: 14%;
-    margin-top: 500px;
-}
-
-#menu {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    height: 100vh;
-    overflow-y: scroll;
-}
-
-.fixed {
-    position: fixed;
-    top: 0;
-}
-
-
-ul {
-    list-style: none;
-    width: 200px;
-    height: 10%;
-}
-
-li {
-    margin-top: 25px;
-    margin-bottom: 5px;
-}
+/*
+organize cocktails
+*/
 
 section {
     display: flex;
-    border-top: 1px solid black;
     padding: 2vh;
+    margin-bottom: 2%;
 }
 
-#cardContent {
-    height: 10%;
-    display: flex;
-    justify-content: center;
+/* 
+Ingredient Styles 
+*/
+
+#menu {   
+    border-right: 2px solid rgb(141, 182, 0);
+    margin-right: 30px;
+    padding: 0px 30px 0 10px;
+}
+
+#menu h1 {
+    text-align: left;
+}
+
+#menu ul li {
+    padding-top: 27px;
+}
+
+/*
+Styles of displaying cocktail information
+*/
+
+#cocktail {
     text-align: center;
-    background: whitesmoke;
+    margin-top: 1%;
+    box-shadow: 1px 1px 20px rgb(1, 196, 231);
+}
+
+.textNmae {
+    padding: 1%;
+}
+
+#cocktail p {
+    margin: 1%;
+    padding: 2%;
+}
+
+#cocktailInformation {
+    margin: 2% 12%;
+    align-items: center;
+    display: flex;
+}
+
+#cocktailImage img {
+    border-radius: 6%;
+    width: 55%;
+    box-shadow: 1px 1px 20px rgb(141, 182, 0);
+}
+
+#cocktailIngredients {
+    display: flex;
     flex-wrap: wrap;
 }
 
-.cocktailCards,
-.categoryCards {
+#cocktailIngredients div {
+    margin: 3%;
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 20px rgba(140, 182, 0, 0.527);
+    transition: transform 0.3s ease-in-out;
+}
+
+#cocktailIngredients div:hover {
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 20px rgb(1, 196, 231)
+}
+
+#cocktailIngredients div img {
+    width: 120px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 10px 5px;
+}
+
+#cocktailIngredients div p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*
+cocktail cards style
+*/
+
+#cardContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.cocktailCards {
     margin: 50px;
-    box-shadow: 1px 1px 20px rgb(255, 0, 0);
+    box-shadow: 1px 1px 20px rgb(141, 182, 0);
     overflow: hidden;
     border-radius: 10px;
     position: relative;
-    flex-basis: 18%;
+    width: 18%;
 }
 
-img {
+.cocktailCards:hover {
+    box-shadow: 1px 1px 20px rgb(1, 196, 231)
+}
+
+.showCocktailPicture {
     height: 100%;
     width: 100%;
 }
 
-.tittle {
+.showCocktailName {
     position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(27, 27, 27, .5);
-    color: rgb(255, 255, 255);
-    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(184, 184, 184);
     padding: 5px;
     width: 100%;
+}
+
+/* 
+Alphabet Bar Styles
+*/
+
+#alphabet {
+    background-color: rgb(141, 182, 0);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#content {
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
 }
