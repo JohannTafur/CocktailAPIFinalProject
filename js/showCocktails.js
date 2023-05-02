@@ -4,9 +4,11 @@ import { bringInformation } from './cocktailInformation.js'
 const createCocktailCard = (cocktails) => {
 
     const cardContent = document.querySelector('#cardContent');
+    const informationContent = document.querySelector('#cocktail');
 
-    while (cardContent.firstChild) {
+    while (cardContent.firstChild || informationContent.firstChild) {
         cardContent.removeChild(cardContent.firstChild);
+        informationContent.removeChild(informationContent.firstChild);
     }
 
     const cardCreate = (cocktails) => {
